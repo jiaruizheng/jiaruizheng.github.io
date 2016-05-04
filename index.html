@@ -32,21 +32,24 @@
   </div>
 </div>
 <div id="content">
-  <div id="e" class="pop"> <p>English</p></div>
-  <div id="m" class="pop"> <p>Math</p></div>
-  <div id="s" class="pop"> <p>Science</p></div>
-  <div id="h" class="pop"> <p>History</p></div>
-  <div id="nlp" class="pop"> <p>Native Language Project</p></div>
+  <div id="e" class="pop"> <p class="para">English</p></div>
+  <div id="m" class="pop"> <p class="para">Math</p></div>
+  <div id="s" class="pop"> <p class="para">Science</p></div>
+  <div id="h" class="pop"> <p class="para">History</p></div>
+  <div id="nlp" class="pop"> <p class="para">Native Language Project</p></div>
  </div>
 <div class='sectionHeroImg'>
-  <h1>
-    Portfolio
-    <span>
-      MIHS
+  <h1 class="h1">
+    Senior Portfolio 
+    </br>
+    <span class="mihs">M</span><span class="mihs">I</span><span class="mihs">H</span><span class="mihs">S</span>
       <p class="fonts">
-        By Jerry
+        Created by Jiarui (Jerry) Zheng
       </p>
-    </span>
+      <p class="fonts">
+        Spring/Summer 2016
+      </p>
+    
   </h1>
 </div>
 <script type="text/javascript">
@@ -56,10 +59,11 @@ function toggle(IDS) {
   
   
   for (var i=0; i<sel.length; i++) { 
-    if (sel[i].id != IDS) { sel[i].style.display = 'none'; }
+    if (sel[i].id != IDS) { sel[i].style.display = 'none';   }
   }
   var status = document.getElementById(IDS).style.display;
-  if (status == 'block') { document.getElementById(IDS).style.display = 'none'; id.style.opacity = "0";}
+  if (status == 'block') { document.getElementById(IDS).style.display = 'none'; id.style.opacity = "0"; 
+  }
                     else { document.getElementById(IDS).style.display = 'block';  id.style.opacity = "1";}
   return false;
 }

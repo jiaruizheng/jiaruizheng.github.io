@@ -6,11 +6,24 @@ body {
   background-image: url("http://paullmo.com/wp-content/uploads/2013/06/Education_Chalkboard.jpg");
   background-size: cover;
   background-position: center; 
-  
+  position:relative;
+  z-index: -1;
+}
+#e,
+#m,
+#s,
+#h,
+#nlp{
+  opacity:0;
+  transition: opacity 0.2s ;
+  -webkit-transition: opacity 0.2s ;
+}
+.h1{
+  position:relative;
+  z-index: 1;
 }
 .pop{
-  display:block;
-  opacity:0;
+  display:none;
   left:3%;
   right:3%;
   top:10%;
@@ -18,19 +31,68 @@ body {
   width:calc(100% - 140px);
   height:calc(100% - 140px);
   background-color:gray;
-  transition: all 0.5s linear;
   position:fixed;
   border-radius:10px;
   box-shadow: 3px 3px 3px black;
   -webkit-box-shadow: 3px 3px 3px black;
   -moz-box-shadow: 3px 3px 3px black;
-  -webkit-transition: all 1s linear;
+}
+.mihs{
+display: inline;
+text-transform: none;
+  line-height: 1.2;
+  text-shadow: 3px 3px 3px #4a585f;
+  
+}
+.mihs:after {
+  width: 0px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  transition: .2s linear;
+  
+}
+.mihs:nth-child(2):after {
+  content: 'anhattan ';
+}
+.mihs:nth-child(3):after {
+  content: 'nternational ';
+}
+.mihs:nth-child(4):after {
+  content: 'igh ';
+}
+.mihs:nth-child(5):after {
+  content: 'chool';
+}
+.h1:hover .mihs:nth-child(2):after {
+  width: 225px; 
+}
+.h1:hover .mihs:nth-child(3):after {
+  width: 305px;
+}
+.h1:hover .mihs:nth-child(4):after {
+  width: 90px;
+}
+.h1:hover .mihs:nth-child(5):after {
+  width: 130px;
+}
+.para{
+  font-size: 26px;
+  margin-left:50px;
+    margin-top:50px;
+    transition: all 0.2s ;
+  -webkit-transition: all 0.2s ;
+
+}
+.para:hover{
+  background-color: white;
 }
 
-
 .fonts {
-    font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 12px;
+    font-family: 'Fira Sans', sans-serif;;
+    font-size: 22px;
+    font-weight:bold;
+    line-height: 1.0;
 }
 
 .menu {
@@ -75,13 +137,14 @@ body {
   cursor: pointer;
   background: #fff;
   z-index: 1;
+  
 }
 .menu span i {
   position: absolute;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   width: 45%;
-  height: 2px;
+  height: 3px;
   left: 0;
   right: 0;
   margin: auto;
@@ -121,6 +184,7 @@ body {
   transition: opacity .3s ease .3s;
   cursor: pointer;
   position: relative;
+  line-height: 1.5;
 }
 .menu .menuContent ul li:hover:before {
   opacity: .8;
@@ -136,8 +200,8 @@ body {
   content: "";
   position: absolute;
   width: 20px;
-  height: 2px;
-  background: rgba(0, 0, 0, 0.47);
+  height: 10px;
+  background: white;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
@@ -163,7 +227,8 @@ body {
 .sectionHeroImg {
   width: 100%;
   height: 100vh;
-  background-image: url();
+  position: relative;
+  z-index: -1; 
   background-position: center center;
   background-size: cover;
   
@@ -172,18 +237,20 @@ body {
   font-weight: 700;
   font-size: 60px;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: capitalize;
   position: absolute;
-  z-index: -1; 
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 .sectionHeroImg h1 span {
-  font-weight: 300;
+  font-weight: 170;
+  font-size:50px;
+
+  
 }
 .sectionHeroImg h1 span p {
-  font-size: 20px;
-  text-transform: capitalize;
+  font-size: 15px;
+  
 }
